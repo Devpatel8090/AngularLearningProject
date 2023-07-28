@@ -1,0 +1,18 @@
+<p>own-api-data works!</p>
+
+
+<ul>
+    <li *ngFor="let user of users">
+        {{user.id}} -- {{user.name}} -- {{user.lastName}}
+    </li>
+</ul>
+
+
+<form #usersForm="ngForm" (submit)="getUserData(usersForm.value)">
+<input type="text" ngModel name="name" placeholder="Enter Name">
+<br /><br />
+<input type="number" ngModel name="age" placeholder="Enter Age">
+<br /><br />
+<button>Add me</button>
+
+</form>

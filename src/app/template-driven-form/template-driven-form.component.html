@@ -1,0 +1,25 @@
+
+
+
+<h1>{{title}}</h1>
+
+<form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
+    <input type="text" placeholder="Enter Name" name="name" ngModel>
+    <br><br>
+    <input type="password" placeholder="Enter Password" name="password" ngModel>
+    <br><br>
+    <button>Login</button>
+
+    <h1>name : {{name}}</h1>
+    <h1>password : {{password}}</h1>
+</form>
+
+
+<ul>
+    <li *ngFor="let user of users.users">
+        {{user.id}} -- {{user.firstName}} -- {{user.lastName}}
+    </li>
+</ul>
+
+
+

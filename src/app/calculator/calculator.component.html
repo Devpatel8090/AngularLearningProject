@@ -1,0 +1,46 @@
+<p>calculator works!</p>
+
+
+
+  <div class="container">
+    <h1>{{title}}</h1>
+    <div class="calculator">
+      <input type="text" class="text-end" value="{{displayString}}" name="screen" id="screen" />
+      <table>
+       
+        <tr>
+          <td><button (click)="DisplayClick('7')">7</button></td>
+          <td><button (click)="DisplayClick('8')">8</button></td>
+          <td><button (click)="DisplayClick('9')">9</button></td>
+          <td><button (click)="DisplayEvent($event)">X</button></td>
+        </tr>
+        <tr>
+          <td><button (click)="DisplayClick('4')">4</button></td>
+          <td><button (click)="DisplayClick('5')">5</button></td>
+          <td><button (click)="DisplayClick('6')">6</button></td>
+          <td><button (click)="DisplayEvent($event)">-</button></td>
+        </tr>
+        <tr>
+          <td><button (click)="DisplayClick('1')">1</button></td>
+          <td><button (click)="DisplayClick('2')">2</button></td>
+          <td><button (click)="DisplayClick('3')">3</button></td>
+          <td><button (click)="DisplayEvent($event)">+</button></td>
+        </tr>
+        <tr>
+          <td><button (click)="DisplayClick('0')">0</button></td>
+          
+          <td><button (click)="DisplayClick('.')">.</button></td>
+          <td><button (click)="DisplayEvent($event)">/</button></td>
+          <td><button (click)="GetAnswer()">=</button></td>
+          
+        </tr>
+        <tr>
+            
+            <td><button class="BigButton" (click)="ClearDisplay()">Clear</button></td>
+            <td><button class="BigButton" (click)="DisplayEvent($event)">Back</button></td>
+            
+            <td><button  class="BigButton" (click)="DisplayEvent($event)">History</button></td>
+          </tr>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,20 @@
+<form [formGroup]="updateForm"  method="post"  (submit)="UpdateDetails()"  class="example-form mt-2 d-flex align-items-center justify-content-center flex-column">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput  name="title" placeholder="Enter title" formControlName="title">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input type="text"  matInput  name="description" formControlName="description" placeholder="Enter description">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="Pending">Pending</mat-option>
+          <mat-option value="Completed">Completed</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <button mat-flat-button color="accent" class="mb-2">Update Task</button>
+  </form>

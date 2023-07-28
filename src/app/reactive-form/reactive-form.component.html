@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)=userLogin()>
+    <input appChangeValue type="text" placeholder="Enter Name" name="name" formControlName="user">
+    <br>
+    <span class="text-danger" *ngIf="userValidation && userValidation.invalid && userValidation.touched">This field is required</span>
+    <br>
+    <br>
+    <input appChangeValue type="password" placeholder="Enter Password" name="password" formControlName="password">
+    <br>
+    <span class="text-danger" *ngIf="passwordValidation && passwordValidation.invalid && passwordValidation.touched">This field is required</span>
+    <br>
+    <button [disabled]="loginForm.invalid">Login</button>
+
+
+    
+</form>
+
+
+
+<router-outlet></router-outlet>
